@@ -3,136 +3,156 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Friend Finder - Survey</title>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
   crossorigin="anonymous">
-	</head>
+</head>
+
+
 <body>
 <div class="container-fluid">
 	<div class="jumbotron">
 		<h1>Survey Questions</h1><br>
 		<hr>
-		<form method="POST" action="/api/friends">
-			<h3><strong>About You</strong></h3>
+    <h3><strong>About You</strong></h3>
+		<form method="POST" action="/newFriend" role="form">
+
+
 			<fieldset class="form-group">
 				<label for="name">Name (Required)</label>
 				<input type="text" class="form-control" placeholder="Your Name" id="name" name="name" required>
 			</fieldset>
+
 			<fieldset class="form-group">
 				<label for="photo">Link to Photo Image (Required)</label>
 				<input type="text" class="form-control" placeholder="Drag your pic here" id="photo" name="photo" required>
 			</fieldset>
 			<hr>
+
 			<h4><strong>Question 1</strong></h4>
+
 			<fieldset class="form-group">
-				<label for="question01">You love trying new things</label>
+				<label for="question01">You like to try new things</label>
 				<br>
 				<div class="col-md-4">
           <select class="form-control" title="Select an option" id="question01" name="scores[0]">
-            <option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+            <option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset>
+
 			<h4><strong>Question 2</strong></h4>
+
 			<fieldset class="form-group">
 				<label for="question02">You trust your experience more rather than your intuition</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question02" name="scores[1]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset>
+
 			<h4><strong>Question 3</strong></h4>
+
 			<fieldset class="form-group">
 				<label for="question03">It is hard to distruct you!</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question03" name="scores[2]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset>
+
 			<h4><strong>Question 4</strong></h4>
+
 			<fieldset class="form-group">
 				<label for="question04">You like to think twice before jump into the action.</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control"  id="question04"  data-width="75%" name="scores[3]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset>
+
 			<h4><strong>Question 5</strong></h4>
+
 			<fieldset class="form-group">
 				<label for="question05">You consider yourself laid back person..</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question05" name="scores[4]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset>
+
 			<h4><strong>Question 6</strong></h4>
+
 			<fieldset class="form-group">
 				<label for="question06">You are very attentive and caring!.</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question06" name="scores[5]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset>
+
 			<h4><strong>Question 7</strong></h4>
+
 			<fieldset class="form-group">
 				<label for="question07">You would rather lie then will heart others feelings!</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question07" name="scores[6]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset>
+
 			<h4><strong>Question 8</strong></h4>
+
 			<fieldset class="form-group">
 				<label for="question08">You are "down to earth" person.</label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question08" name="scores[7]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset>
@@ -142,25 +162,25 @@
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question09" name="scores[8]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset>
 			<h4><strong>Question 10</strong></h4>
 			<fieldset class="form-group">
-				<label for="question10"> You feel more comfortable staying home rather then going out. </label>
+				<label for="question10"> You feel more comfortable staying at home rather then going out. </label>
 				<br>
 				<div class="col-md-4">
 					<select class="form-control" id="question10" name="scores[9]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
 					</select>
 				</div>
 			</fieldset><br>
@@ -177,3 +197,4 @@
 </footer>
 
 </body>
+</html>

@@ -1,4 +1,4 @@
-var friendsData     = require('../data/friends.js');
+var friendsData  = require('../data/friends.js');
 
 var path = require('path');
 
@@ -32,11 +32,11 @@ for (var k = 0; k < 2; k++ ){
 
       }
 
-      / push in the user input into the friendArray
+
           friendsData.push(req.body);
 
-          // respond back with the best match
-          res.json({name: friendsData[bestMatch].name, photo: friendsData[bestMatch].photo}); // KEY LINE
+
+          res.json({name: friendsData[bestMatch].name, photo: friendsData[bestMatch].photo}); 
 
         });
 

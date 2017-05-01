@@ -10,22 +10,22 @@ app.get('/api/friends', function(req, res){
 
 app.post('/api/friends', function(req, res){
 
-var bestMatch = 0;
-var bestDiff = 1000;
+var closestMatch = 0;
+var maxDiff = 1000;
 
 for (var i = friendsData.length - 1; i >= 0; i--) {
 
 var totalDifference = 0;
 
-for (var k = 0; k < 2; k++ ){
+for (var j = 0; j < 2; j++ ){
 
-  totalDifference = totalDifference + Math.abs(friendsData[i].scores[k] - req.body.scores[k]);
+  totalDifference = totalDifference + Math.abs(friendsData[i].scores[j] - req.body.scores[j]);
 
         }
 
-        if (totalDifference < bestDiff){
-          bestDiff = totalDifference;
-          bestMatch = i;
+        if (totalDifference < maxDiff){
+          maxDiff = totalDifference;
+          closestMatch = i;
         }
 
         console.log("total difference for " + friendsData[i].name + " is " + totalDifference);
@@ -36,7 +36,7 @@ for (var k = 0; k < 2; k++ ){
           friendsData.push(req.body);
 
 
-          res.json({name: friendsData[bestMatch].name, photo: friendsData[bestMatch].photo}); 
+          res.json({name: friendsData[closestMatch].name, photo: friendsData[closestMatch].photo});
 
         });
 

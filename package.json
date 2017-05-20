@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "comments": "There's no need to install the `path` package as it's a native node package. Nor is there a need for the `require` package as it has to do with client side require statements, which you don't need.",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "path": "^0.12.7",
-    "require": "^2.4.20"
+    "express": "^4.15.2"
   },
   "devDependencies": {},
   "scripts": {

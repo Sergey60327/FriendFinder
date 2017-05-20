@@ -1,0 +1,2 @@
+# this allows you to not check in all your dependency files into git
+node_modules
